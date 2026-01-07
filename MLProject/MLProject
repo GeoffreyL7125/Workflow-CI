@@ -1,0 +1,7 @@
+name: student-performance-prediction-ci
+
+conda.env: conda.yaml
+
+entry_points:
+  main:
+    command: "python modelling_tuning.py"
