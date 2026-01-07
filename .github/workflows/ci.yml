@@ -37,7 +37,7 @@ jobs:
 
     - name: Run mlflow project
       run: |
-        python MLProject/modelling_tuning.py
+        python MLProject/modelling_tuning.py --dataset "student_performance_prediction_preprocessing.csv"
 
     - name: Upload to GitHub
       run: |
