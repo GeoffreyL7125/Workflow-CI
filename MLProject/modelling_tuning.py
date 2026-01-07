@@ -64,7 +64,7 @@ def main(dataset):
         mlflow.log_metric('training_score', training_score)
         mlflow.sklearn.log_model(best_model, artifact_path = 'model', input_example = X_test.iloc[:5])
 
-        conf_matrix_path = 'MLProject/artifact/confusion_matrix.png'
+        conf_matrix_path = 'confusion_matrix.png'
 
         plot_confusion_matrix(y_test, y_predict, conf_matrix_path)
         mlflow.log_artifact(conf_matrix_path)
