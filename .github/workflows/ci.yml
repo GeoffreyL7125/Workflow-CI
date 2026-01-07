@@ -45,7 +45,7 @@ jobs:
         name: mlflow-artifacts
         path: |
           mlruns
-          artifact
+          MLProject/artifact
           *.png
           *.csv
 
