@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+import argparse
 
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.linear_model import LogisticRegression
@@ -9,8 +10,6 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_sc
 
 import mlflow
 import mlflow.sklearn
-
-DATASET_PATH = 'MLProject/student_performance_prediction_preprocessing.csv'
 
 def plot_confusion_matrix(y_true, y_predict, img_name):
     conf_matrix = confusion_matrix(y_true, y_predict)
@@ -24,7 +23,8 @@ def plot_confusion_matrix(y_true, y_predict, img_name):
     plt.savefig(img_name)
     plt.close()
 
-def main():
+def main(dataset):
+    DATASET_PATH = f"MLProject/{dataset}"
     student_performance_prediction_df = pd.read_csv(DATASET_PATH)
     X = student_performance_prediction_df.drop(columns = ['Passed'])
     y = student_performance_prediction_df['Passed']
@@ -76,4 +76,7 @@ def main():
         print(f"F1-Score: {f1 * 100:.2f}%")
 
 if __name__ == '__main__':
-    main()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--dataset", type = str, required = True)
+    args = parser.parse_args()
+    main(args.dataset)
