@@ -10,7 +10,7 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_sc
 import mlflow
 import mlflow.sklearn
 
-DATASET_PATH = 'student_performance_prediction_preprocessing.csv'
+DATASET_PATH = 'MLProject/student_performance_prediction_preprocessing.csv'
 
 def plot_confusion_matrix(y_true, y_predict, img_name):
     conf_matrix = confusion_matrix(y_true, y_predict)
