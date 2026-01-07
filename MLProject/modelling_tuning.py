@@ -25,8 +25,6 @@ def plot_confusion_matrix(y_true, y_predict, img_name):
     plt.close()
 
 def main():
-    mlflow.set_experiment('Student Performance Prediction - Skilled')
-
     student_performance_prediction_df = pd.read_csv(DATASET_PATH)
     X = student_performance_prediction_df.drop(columns = ['Passed'])
     y = student_performance_prediction_df['Passed']
