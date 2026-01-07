@@ -1,0 +1,66 @@
+{
+  "dataframe_split": {
+    "columns": [
+      "Study Hours per Week",
+      "Attendance Rate",
+      "Previous Grades",
+      "Participation in Extracurricular Activities",
+      "Parent Education Level_Bachelor",
+      "Parent Education Level_Doctorate",
+      "Parent Education Level_High School",
+      "Parent Education Level_Master"
+    ],
+    "data": [
+      [
+        -0.3433340156461095,
+        0.8120843596287861,
+        0.1515475790443287,
+        0,
+        false,
+        true,
+        false,
+        false
+      ],
+      [
+        1.431683216326452,
+        -0.3005005859977975,
+        -0.1206319423951442,
+        1,
+        false,
+        false,
+        true,
+        false
+      ],
+      [
+        0.2411228778082706,
+        1.6434665168003002,
+        -0.0648002456896114,
+        0,
+        false,
+        true,
+        false,
+        false
+      ],
+      [
+        0.5225280487307497,
+        -0.8629061629079393,
+        -1.7606880331201742,
+        0,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        -0.8195581510533819,
+        -0.2454826491261538,
+        -1.7048563364146414,
+        1,
+        false,
+        false,
+        false,
+        true
+      ]
+    ]
+  }
+}
