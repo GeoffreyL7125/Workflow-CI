@@ -25,7 +25,6 @@ def plot_confusion_matrix(y_true, y_predict, img_name):
     plt.close()
 
 def main():
-    mlflow.set_tracking_uri('http://127.0.0.1:5000')
     mlflow.set_experiment('Student Performance Prediction - Skilled')
 
     student_performance_prediction_df = pd.read_csv(DATASET_PATH)
@@ -67,7 +66,7 @@ def main():
         mlflow.log_metric('training_score', training_score)
         mlflow.sklearn.log_model(best_model, artifact_path = 'model', input_example = X_test.iloc[:5])
 
-        conf_matrix_path = 'confusion_matrix.png'
+        conf_matrix_path = 'artifact/confusion_matrix.png'
 
         plot_confusion_matrix(y_test, y_predict, conf_matrix_path)
         mlflow.log_artifact(conf_matrix_path)
