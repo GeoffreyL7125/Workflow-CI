@@ -4,4 +4,6 @@ conda.env: conda.yaml
 
 entry_points:
   main:
-    command: "python modelling_tuning.py"
+    parameters: 
+      dataset: {type: str, default: "student_performance_prediction_preprocessing.csv"
+    command: "python modelling_tuning.py --dataset {dataset}"
